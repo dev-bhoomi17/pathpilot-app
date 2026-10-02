@@ -1,0 +1,186 @@
+.field-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  padding: 40px 7%;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(255, 213, 190, 0.75),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(205, 180, 255, 0.65),
+      transparent 30%
+    ),
+    #fff8f3;
+
+  color: #30254d;
+}
+
+.field-back-button {
+  border: none;
+  background: transparent;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: #655b75;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.field-back-button:hover {
+  transform: translateX(-4px);
+}
+
+.field-content {
+  max-width: 1100px;
+  margin: 35px auto 60px;
+
+  text-align: center;
+}
+
+.field-label {
+  margin-bottom: 12px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #8b5cf6;
+}
+
+.field-content h1 {
+  margin: 0;
+
+  font-size: clamp(2.5rem, 5vw, 4.3rem);
+  line-height: 1.08;
+  letter-spacing: -2px;
+}
+
+.field-subtitle {
+  max-width: 600px;
+
+  margin: 20px auto 40px;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: #6b6274;
+}
+
+.field-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  text-align: left;
+}
+
+.field-card {
+  position: relative;
+
+  min-height: 185px;
+
+  padding: 25px;
+
+  border: 1px solid rgba(139, 92, 246, 0.12);
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  box-shadow: 0 12px 35px rgba(78, 55, 110, 0.07);
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.field-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(139, 92, 246, 0.3);
+
+  box-shadow: 0 18px 45px rgba(78, 55, 110, 0.13);
+}
+
+.field-icon {
+  display: block;
+
+  margin-bottom: 16px;
+
+  font-size: 2.2rem;
+}
+
+.field-title {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+
+  color: #30254d;
+}
+
+.field-description {
+  display: block;
+
+  max-width: 240px;
+
+  font-size: 0.85rem;
+  line-height: 1.5;
+
+  color: #756d7d;
+}
+
+.field-arrow {
+  position: absolute;
+
+  right: 22px;
+  bottom: 20px;
+
+  font-size: 1.3rem;
+
+  color: #8b5cf6;
+
+  transition: transform 0.25s ease;
+}
+
+.field-card:hover .field-arrow {
+  transform: translateX(5px);
+}
+
+@media (max-width: 900px) {
+  .field-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .field-page {
+    padding: 30px 20px;
+  }
+
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .field-content h1 {
+    letter-spacing: -1px;
+  }
+}

@@ -1,0 +1,1448 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.milestone-details-page {
+  min-height: 100vh;
+  position: relative;
+
+  background:
+    radial-gradient(
+      circle at 7% 8%,
+      rgba(255, 196, 169, 0.42),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 93% 7%,
+      rgba(203, 182, 255, 0.42),
+      transparent 29%
+    ),
+    linear-gradient(
+      135deg,
+      #fff4ee 0%,
+      #faf3ff 48%,
+      #eee8ff 100%
+    );
+
+  color: #351b4c;
+
+  font-family:
+    "Plus Jakarta Sans",
+    sans-serif;
+}
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.milestone-details-topbar {
+  width: min(1240px, calc(100% - 48px));
+
+  margin: 0 auto;
+  padding: 24px 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.milestone-back-button {
+  border: 1px solid rgba(78, 48, 105, 0.08);
+
+  background: rgba(255, 255, 255, 0.72);
+
+  color: #4d2b69;
+
+  padding: 12px 18px;
+
+  border-radius: 14px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 24px rgba(83, 55, 105, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.milestone-back-button:hover {
+  transform: translateX(-4px);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 28px rgba(83, 55, 105, 0.11);
+}
+
+.milestone-back-button:active {
+  transform: translateX(-2px);
+}
+
+.milestone-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #381952;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.milestone-brand span {
+  width: 39px;
+  height: 39px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #46205e,
+      #61367e
+    );
+
+  color: #ffd0bb;
+
+  transform: rotate(-8deg);
+
+  box-shadow:
+    0 10px 24px rgba(67, 32, 88, 0.15);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.milestone-details-container {
+  width: min(1160px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  padding:
+    4px
+    0
+    78px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.milestone-details-hero {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 410px;
+
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  align-items: center;
+
+  padding: 58px;
+
+  border-radius: 40px;
+
+  background:
+    radial-gradient(
+      circle at 83% 22%,
+      rgba(255, 255, 255, 0.18),
+      transparent 23%
+    ),
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(255, 186, 158, 0.08),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #42205b 0%,
+      #5a3778 57%,
+      #775198 100%
+    );
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  box-shadow:
+    0 30px 80px
+    rgba(72, 41, 103, 0.2);
+
+  isolation: isolate;
+}
+
+.milestone-details-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  right: -100px;
+  bottom: -120px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 203, 181, 0.08);
+
+  filter: blur(5px);
+}
+
+.milestone-details-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  left: -110px;
+  top: -105px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+}
+
+.milestone-hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+.milestone-checkpoint {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 13px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 197, 170, 0.12);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  color: #ffc3aa;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.milestone-hero-content h1 {
+  max-width: 610px;
+
+  margin:
+    20px
+    0
+    17px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(
+      39px,
+      5vw,
+      60px
+    );
+
+  line-height: 1.02;
+
+  letter-spacing: -2.5px;
+}
+
+.milestone-hero-content > p {
+  max-width: 600px;
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.69);
+
+  font-size: 14px;
+
+  line-height: 1.82;
+}
+
+/* =========================================================
+   HERO META
+========================================================= */
+
+.milestone-hero-meta {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 28px;
+
+  flex-wrap: wrap;
+}
+
+.milestone-meta-box {
+  min-width: 190px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding:
+    13px
+    15px;
+
+  border-radius: 17px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.milestone-meta-box:hover {
+  background:
+    rgba(255, 255, 255, 0.11);
+
+  transform: translateY(-2px);
+}
+
+.milestone-meta-box > span {
+  width: 33px;
+  height: 33px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+
+  background:
+    rgba(255, 191, 164, 0.11);
+
+  color: #ffc3aa;
+
+  font-size: 17px;
+}
+
+.milestone-meta-box small {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color:
+    rgba(255, 255, 255, 0.43);
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.milestone-meta-box strong {
+  color: #ffffff;
+
+  font-size: 12px;
+}
+
+.completed-box > span {
+  color: #a9e6bd;
+
+  background:
+    rgba(169, 230, 189, 0.1);
+}
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.milestone-hero-visual {
+  position: relative;
+
+  min-height: 300px;
+
+  display: grid;
+  place-items: center;
+}
+
+.milestone-orbit {
+  position: absolute;
+
+  width: 320px;
+  height: 208px;
+
+  border:
+    1px dashed
+    rgba(255, 255, 255, 0.17);
+
+  border-radius: 50%;
+
+  transform: rotate(-16deg);
+}
+
+.milestone-orbit::before {
+  content: "";
+
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  right: 14%;
+  top: 18%;
+
+  border-radius: 50%;
+
+  background: #ffc5ad;
+
+  box-shadow:
+    0 0 0 7px
+    rgba(255, 197, 173, 0.06);
+}
+
+.milestone-hero-plane {
+  position: relative;
+  z-index: 3;
+
+  width: 112px;
+  height: 112px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 34px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffd9c7,
+      #ffad8c
+    );
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.32);
+
+  box-shadow:
+    0 22px 55px
+    rgba(255, 169, 137, 0.3);
+
+  font-size: 48px;
+
+  transform: rotate(-13deg);
+
+  animation:
+    milestoneFloat
+    3.6s
+    ease-in-out
+    infinite;
+}
+
+@keyframes milestoneFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(-13deg);
+  }
+
+  50% {
+    transform:
+      translateY(-12px)
+      rotate(-8deg);
+  }
+}
+
+.milestone-hero-star {
+  position: absolute;
+
+  color: #ffc2a7;
+
+  font-size: 27px;
+
+  animation:
+    starPulse
+    2.5s
+    ease-in-out
+    infinite;
+}
+
+.star-a {
+  right: 13%;
+  top: 13%;
+}
+
+.star-b {
+  left: 8%;
+  bottom: 11%;
+
+  color: #c9b2ff;
+
+  animation-delay: 0.8s;
+}
+
+@keyframes starPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.42;
+  }
+
+  50% {
+    transform: scale(1.24);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   DETAIL CARDS
+========================================================= */
+
+.milestone-detail-card,
+.milestone-task-section {
+  position: relative;
+
+  margin-top: 24px;
+
+  padding: 32px;
+
+  border-radius: 30px;
+
+  background:
+    rgba(255, 255, 255, 0.79);
+
+  border:
+    1px solid
+    rgba(104, 71, 135, 0.08);
+
+  box-shadow:
+    0 18px 50px
+    rgba(93, 64, 119, 0.07);
+
+  backdrop-filter: blur(13px);
+}
+
+.milestone-detail-card::before,
+.milestone-task-section::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 34px;
+  right: 34px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(128, 82, 163, 0.13),
+      transparent
+    );
+}
+
+.detail-card-heading > div,
+.task-section-heading > div {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.detail-card-heading > div > span,
+.task-section-heading > div > span {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8e8fb,
+      #efe6ff
+    );
+
+  border:
+    1px solid
+    rgba(115, 74, 147, 0.05);
+
+  box-shadow:
+    0 8px 18px
+    rgba(107, 73, 133, 0.06);
+
+  font-size: 18px;
+}
+
+.detail-card-heading small,
+.task-section-heading small {
+  display: block;
+
+  color: #a374c5;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.detail-card-heading h2,
+.task-section-heading h2 {
+  margin:
+    4px
+    0
+    0;
+
+  color: #3d2054;
+
+  font-size: 25px;
+
+  letter-spacing: -0.5px;
+}
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.detail-skills {
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  margin-top: 25px;
+}
+
+.detail-skill {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding:
+    11px
+    14px;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5edfb,
+      #efe8fa
+    );
+
+  border:
+    1px solid
+    rgba(106, 74, 132, 0.07);
+
+  color: #684685;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  box-shadow:
+    0 7px 18px
+    rgba(101, 70, 127, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.detail-skill:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 11px 22px
+    rgba(101, 70, 127, 0.09);
+}
+
+.detail-skill span {
+  color: #e88a72;
+}
+
+.detail-empty-text {
+  margin-top: 22px;
+
+  color: #8b7896;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   TASK SECTION
+========================================================= */
+
+.task-section-heading {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.task-total {
+  padding:
+    9px
+    13px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff0e9,
+      #f8e9f5
+    );
+
+  border:
+    1px solid
+    rgba(164, 95, 73, 0.07);
+
+  color: #a45f49;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.milestone-task-list {
+  display: grid;
+
+  gap: 11px;
+
+  margin-top: 25px;
+}
+
+/* =========================================================
+   TASK CARD
+========================================================= */
+
+.milestone-task-card {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding:
+    16px
+    17px;
+
+  border-radius: 19px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fcf9fd,
+      #faf7fc
+    );
+
+  border:
+    1px solid
+    rgba(107, 74, 134, 0.08);
+
+  font-family: inherit;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 16px
+    rgba(90, 59, 117, 0.03);
+
+  transition:
+    transform 0.24s ease,
+    background 0.24s ease,
+    border-color 0.24s ease,
+    box-shadow 0.24s ease;
+}
+
+.milestone-task-card:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #fdfaff
+    );
+
+  border-color:
+    rgba(110, 74, 138, 0.13);
+
+  box-shadow:
+    0 12px 28px
+    rgba(100, 66, 128, 0.09);
+}
+
+.milestone-task-card:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.milestone-task-card:disabled {
+  cursor: default;
+
+  opacity: 0.82;
+}
+
+/* =========================================================
+   TASK NUMBER
+========================================================= */
+
+.task-number {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffe2d4,
+      #ffd0bb
+    );
+
+  border:
+    1px solid
+    rgba(175, 94, 67, 0.06);
+
+  color: #9b5a44;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.milestone-task-card:hover:not(:disabled)
+  .task-number {
+  transform: rotate(-4deg);
+}
+
+/* =========================================================
+   TASK CONTENT
+========================================================= */
+
+.task-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.task-content h3 {
+  margin:
+    0
+    0
+    5px;
+
+  color: #4a2b60;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+
+  font-weight: 700;
+}
+
+.task-content span {
+  color: #a090aa;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  transition:
+    color 0.25s ease;
+}
+
+/* =========================================================
+   TASK ARROW
+========================================================= */
+
+.task-arrow {
+  width: 35px;
+  height: 35px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 11px;
+
+  background:
+    #f0e8f7;
+
+  color: #74518f;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  transition:
+    transform 0.24s ease,
+    background 0.24s ease;
+}
+
+.milestone-task-card:hover:not(:disabled)
+  .task-arrow {
+  transform: translateX(3px);
+
+  background:
+    #eadff2;
+}
+
+/* =========================================================
+   COMPLETED TASK
+========================================================= */
+
+.milestone-task-card.task-completed {
+  background:
+    linear-gradient(
+      135deg,
+      #f1fbf5,
+      #f8fbfa
+    );
+
+  border-color:
+    rgba(91, 160, 116, 0.14);
+}
+
+.milestone-task-card.task-completed
+  .task-number {
+  background:
+    linear-gradient(
+      135deg,
+      #a9e6bd,
+      #8fd8aa
+    );
+
+  color: #397354;
+}
+
+.milestone-task-card.task-completed
+  .task-content h3 {
+  color: #406b52;
+}
+
+.milestone-task-card.task-completed
+  .task-content span {
+  color: #57936c;
+}
+
+.milestone-task-card.task-completed
+  .task-arrow {
+  background:
+    #dff4e6;
+
+  color: #4f9467;
+}
+
+/* =========================================================
+   NO TASKS
+========================================================= */
+
+.no-tasks {
+  margin-top: 22px;
+
+  padding: 42px 30px;
+
+  text-align: center;
+
+  border-radius: 21px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fbf8fc,
+      #faf8fd
+    );
+
+  border:
+    1px dashed
+    rgba(107, 74, 134, 0.12);
+}
+
+.no-tasks > span {
+  display: block;
+
+  margin-bottom: 11px;
+
+  font-size: 35px;
+
+  opacity: 0.9;
+}
+
+.no-tasks h3 {
+  margin: 0;
+
+  color: #43235c;
+
+  font-size: 16px;
+}
+
+.no-tasks p {
+  max-width: 400px;
+
+  margin:
+    7px
+    auto
+    0;
+
+  color: #918099;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   BOTTOM CARD
+========================================================= */
+
+.milestone-bottom-card {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 220px;
+
+  display: flex;
+  align-items: center;
+
+  margin-top: 24px;
+
+  padding:
+    38px
+    43px;
+
+  border-radius: 32px;
+
+  background:
+    radial-gradient(
+      circle at 88% 43%,
+      rgba(255, 192, 167, 0.23),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 18% 120%,
+      rgba(202, 179, 255, 0.11),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #3b2051,
+      #62407f
+    );
+
+  box-shadow:
+    0 26px 64px
+    rgba(65, 37, 88, 0.16);
+}
+
+.milestone-bottom-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  right: -125px;
+  top: -110px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.bottom-label {
+  color: #ffc0a5;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+.milestone-bottom-card h2 {
+  max-width: 560px;
+
+  margin:
+    10px
+    0
+    8px;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.9px;
+}
+
+.milestone-bottom-card p {
+  max-width: 540px;
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.61);
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+.bottom-plane {
+  position: absolute;
+
+  right: 9%;
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    rotate(-11deg);
+
+  font-size: 76px;
+
+  filter:
+    drop-shadow(
+      0 16px 24px
+      rgba(255, 171, 140, 0.18)
+    );
+
+  animation:
+    milestoneFloat
+    4s
+    ease-in-out
+    infinite;
+}
+
+/* =========================================================
+   EMPTY PAGE
+========================================================= */
+
+.milestone-details-empty {
+  min-height: 100vh;
+
+  display: grid;
+  place-items: center;
+  align-content: center;
+
+  gap: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff2e9,
+      #f0e9ff
+    );
+
+  color: #43245b;
+}
+
+.milestone-details-empty h2 {
+  margin: 0;
+
+  font-size: 27px;
+}
+
+.milestone-details-empty button {
+  border: none;
+
+  padding:
+    12px
+    18px;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #472364,
+      #654181
+    );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px
+    rgba(71, 35, 100, 0.16);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.milestone-details-empty button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 30px
+    rgba(71, 35, 100, 0.2);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .milestone-details-hero {
+    grid-template-columns: 1fr;
+
+    padding:
+      45px
+      38px;
+  }
+
+  .milestone-hero-visual {
+    min-height: 225px;
+
+    margin-top: 10px;
+  }
+
+  .bottom-plane {
+    right: 7%;
+  }
+}
+
+@media (max-width: 700px) {
+  .milestone-details-topbar {
+    width: min(
+      100% - 32px,
+      1160px
+    );
+
+    padding-top: 18px;
+  }
+
+  .milestone-details-container {
+    width: min(
+      100% - 32px,
+      1160px
+    );
+
+    padding-bottom: 52px;
+  }
+
+  .milestone-details-hero {
+    min-height: 0;
+
+    padding:
+      35px
+      26px;
+
+    border-radius: 29px;
+  }
+
+  .milestone-hero-content h1 {
+    font-size: 42px;
+
+    letter-spacing: -1.8px;
+  }
+
+  .milestone-hero-content > p {
+    font-size: 13px;
+  }
+
+  .milestone-hero-meta {
+    flex-direction: column;
+  }
+
+  .milestone-meta-box {
+    width: 100%;
+  }
+
+  .milestone-detail-card,
+  .milestone-task-section {
+    padding: 24px;
+  }
+
+  .detail-card-heading h2,
+  .task-section-heading h2 {
+    font-size: 22px;
+  }
+
+  .task-section-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .task-total {
+    align-self: flex-start;
+  }
+
+  .milestone-task-card {
+    gap: 12px;
+
+    padding: 14px;
+  }
+
+  .task-number {
+    width: 39px;
+    height: 39px;
+  }
+
+  .task-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .milestone-bottom-card {
+    min-height: 0;
+
+    padding:
+      30px
+      25px;
+
+    border-radius: 28px;
+  }
+
+  .milestone-bottom-card h2 {
+    font-size: 25px;
+  }
+
+  .bottom-plane {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .milestone-details-topbar {
+    padding:
+      15px
+      0;
+  }
+
+  .milestone-brand {
+    font-size: 17px;
+  }
+
+  .milestone-brand span {
+    width: 35px;
+    height: 35px;
+  }
+
+  .milestone-back-button {
+    padding:
+      10px
+      13px;
+
+    font-size: 11px;
+  }
+
+  .milestone-details-hero {
+    padding:
+      29px
+      21px;
+  }
+
+  .milestone-hero-content h1 {
+    font-size: 37px;
+
+    margin-top: 17px;
+  }
+
+  .milestone-hero-visual {
+    min-height: 185px;
+  }
+
+  .milestone-orbit {
+    width: 240px;
+    height: 155px;
+  }
+
+  .milestone-hero-plane {
+    width: 88px;
+    height: 88px;
+
+    border-radius: 27px;
+
+    font-size: 40px;
+  }
+
+  .milestone-detail-card,
+  .milestone-task-section {
+    padding: 20px;
+  }
+
+  .detail-card-heading > div > span,
+  .task-section-heading > div > span {
+    width: 38px;
+    height: 38px;
+  }
+
+  .milestone-task-card {
+    padding: 13px;
+  }
+
+  .task-content h3 {
+    font-size: 12px;
+  }
+
+  .task-content span {
+    font-size: 9px;
+  }
+
+  .milestone-bottom-card {
+    padding:
+      26px
+      21px;
+  }
+}

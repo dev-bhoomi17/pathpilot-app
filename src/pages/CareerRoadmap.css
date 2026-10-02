@@ -1,0 +1,1606 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.roadmap-page {
+  min-height: 100vh;
+
+  position: relative;
+
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(
+      circle at 8% 5%,
+      rgba(255, 199, 177, 0.42),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 91% 5%,
+      rgba(204, 185, 255, 0.4),
+      transparent 27%
+    ),
+    linear-gradient(
+      135deg,
+      #fff3ec,
+      #faf1ff 52%,
+      #eee8ff
+    );
+
+  color: #34204a;
+
+  font-family:
+    "Plus Jakarta Sans",
+    sans-serif;
+}
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.roadmap-topbar {
+  width: min(
+    1220px,
+    calc(100% - 48px)
+  );
+
+  margin: 0 auto;
+
+  padding:
+    24px
+    0
+    18px;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roadmap-back-button {
+  border: none;
+
+  padding:
+    11px
+    16px;
+
+  border-radius: 13px;
+
+  background:
+    rgba(255, 255, 255, 0.74);
+
+  color: #55306d;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 24px
+    rgba(81, 53, 106, 0.07);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.roadmap-back-button:hover {
+  transform: translateX(-3px);
+
+  background: white;
+}
+
+.roadmap-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #402058;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.roadmap-brand-icon {
+  width: 39px;
+  height: 39px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #4b2564,
+      #6b4384
+    );
+
+  color: #ffd2c0;
+
+  transform: rotate(-8deg);
+
+  box-shadow:
+    0 9px 22px
+    rgba(74, 34, 99, 0.15);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.roadmap-container {
+  width: min(
+    1140px,
+    calc(100% - 48px)
+  );
+
+  margin: 0 auto;
+
+  padding-bottom: 70px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.roadmap-hero {
+  min-height: 390px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    0.9fr;
+
+  align-items: center;
+
+  padding:
+    52px;
+
+  border-radius: 38px;
+
+  background:
+    radial-gradient(
+      circle at 82% 23%,
+      rgba(255, 255, 255, 0.17),
+      transparent 23%
+    ),
+    linear-gradient(
+      135deg,
+      #43205d,
+      #5e397e 57%,
+      #795497
+    );
+
+  box-shadow:
+    0 28px 72px
+    rgba(73, 39, 101, 0.18);
+}
+
+.hero-copy {
+  position: relative;
+
+  z-index: 3;
+}
+
+.hero-badge {
+  display: inline-flex;
+
+  padding:
+    8px
+    13px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 197, 171, 0.12);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  color: #ffc5ad;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.hero-copy h1 {
+  max-width: 600px;
+
+  margin:
+    18px
+    0
+    16px;
+
+  color: white;
+
+  font-size:
+    clamp(
+      40px,
+      5vw,
+      59px
+    );
+
+  line-height: 1.03;
+
+  letter-spacing: -2.4px;
+}
+
+.hero-copy h1 span {
+  display: block;
+
+  color: #ffc5ae;
+}
+
+.hero-copy > p {
+  max-width: 600px;
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.68);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.hero-meta {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 11px;
+
+  margin-top: 25px;
+}
+
+.hero-meta-item {
+  min-width: 185px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding:
+    12px
+    14px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 16px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+}
+
+.hero-meta-item > span {
+  width: 33px;
+  height: 33px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+
+  background:
+    rgba(255, 194, 168, 0.1);
+
+  font-size: 15px;
+}
+
+.hero-meta-item small {
+  display: block;
+
+  color:
+    rgba(255, 255, 255, 0.42);
+
+  font-size: 8px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 2px;
+}
+
+.hero-meta-item strong {
+  color: white;
+
+  font-size: 11px;
+}
+
+.hero-flight-visual {
+  position: relative;
+
+  min-height: 285px;
+
+  display: grid;
+
+  place-items: center;
+}
+
+.hero-orbit {
+  position: absolute;
+
+  border:
+    1px dashed
+    rgba(255, 255, 255, 0.18);
+
+  border-radius: 50%;
+}
+
+.orbit-one {
+  width: 305px;
+  height: 190px;
+
+  transform:
+    rotate(-16deg);
+}
+
+.orbit-two {
+  width: 215px;
+  height: 215px;
+
+  transform:
+    rotate(12deg);
+}
+
+.hero-plane {
+  position: relative;
+
+  z-index: 4;
+
+  width: 102px;
+  height: 102px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 31px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffd7c5,
+      #ffab8b
+    );
+
+  font-size: 46px;
+
+  transform:
+    rotate(-12deg);
+
+  box-shadow:
+    0 22px 52px
+    rgba(255, 172, 139, 0.3);
+
+  animation:
+    heroPlaneFloat
+    3.6s
+    ease-in-out
+    infinite;
+}
+
+@keyframes heroPlaneFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(-12deg);
+  }
+
+  50% {
+    transform:
+      translateY(-11px)
+      rotate(-7deg);
+  }
+}
+
+.hero-destination {
+  position: absolute;
+
+  right: 10%;
+  top: 18%;
+
+  width: 44px;
+  height: 44px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.12);
+
+  font-size: 20px;
+}
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.roadmap-progress-card {
+  margin-top: 22px;
+
+  padding:
+    28px
+    30px;
+
+  border-radius: 27px;
+
+  background:
+    rgba(255, 255, 255, 0.8);
+
+  border:
+    1px solid
+    rgba(106, 72, 136, 0.08);
+
+  box-shadow:
+    0 18px 50px
+    rgba(89, 61, 113, 0.07);
+}
+
+.progress-heading {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.section-label {
+  color: #a070bd;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.progress-heading h2 {
+  margin:
+    5px
+    0
+    0;
+
+  color: #3f2255;
+
+  font-size: 25px;
+}
+
+.progress-number {
+  color: #68418a;
+
+  font-size: 38px;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+}
+
+/* =========================================================
+   PROGRESS TRACK + PLANE
+========================================================= */
+
+.progress-track {
+  position: relative;
+
+  height: 13px;
+
+  margin-top: 23px;
+
+  border-radius: 999px;
+
+  background:
+    #eee7f4;
+}
+
+.progress-fill {
+  height: 100%;
+
+  min-width: 0;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ff9f81,
+      #e276a4,
+      #9a70df
+    );
+
+  transition:
+    width 0.75s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+.progress-plane {
+  position: absolute;
+
+  top: 50%;
+
+  width: 35px;
+  height: 35px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #47225f,
+      #79519b
+    );
+
+  color: #ffd2bf;
+
+  font-size: 14px;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-12deg);
+
+  box-shadow:
+    0 9px 21px
+    rgba(65, 33, 87, 0.2);
+
+  transition:
+    left 0.8s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+/*
+  IMPORTANT:
+  left: 0% means the plane is at the true
+  starting edge instead of sitting in the middle.
+*/
+
+.progress-markers {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 11px;
+
+  color: #9a8ca1;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+.progress-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 25px;
+
+  margin-top: 21px;
+}
+
+.progress-stats div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.progress-stats strong {
+  color: #452662;
+
+  font-size: 18px;
+}
+
+.progress-stats span {
+  color: #8e7f97;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   CURRENT CHECKPOINT
+========================================================= */
+
+.roadmap-current-card {
+  margin-top: 22px;
+
+  padding:
+    23px
+    26px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff8f5,
+      #f4ecff
+    );
+
+  border:
+    1px solid
+    rgba(118, 78, 143, 0.08);
+
+  box-shadow:
+    0 16px 38px
+    rgba(98, 66, 124, 0.06);
+}
+
+.roadmap-current-card > div > span {
+  color: #a46cc0;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+.roadmap-current-card h2 {
+  margin:
+    6px
+    0
+    5px;
+
+  color: #412256;
+
+  font-size: 21px;
+}
+
+.roadmap-current-card p {
+  margin: 0;
+
+  color: #84738e;
+
+  font-size: 11px;
+
+  line-height: 1.65;
+}
+
+.roadmap-current-card button {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border: none;
+
+  padding:
+    12px
+    16px;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      100deg,
+      #8a56dc,
+      #d972a4
+    );
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.roadmap-current-card button:hover {
+  transform:
+    translateY(-2px);
+}
+
+/* =========================================================
+   ROADMAP SECTION
+========================================================= */
+
+.journey-section {
+  margin-top: 55px;
+}
+
+.journey-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 25px;
+}
+
+.journey-heading h2 {
+  margin:
+    6px
+    0
+    0;
+
+  color: #3f2055;
+
+  font-size: 38px;
+
+  letter-spacing: -1.5px;
+}
+
+.journey-heading p {
+  max-width: 390px;
+
+  margin: 0;
+
+  color: #816f8d;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   2-COLUMN CHECKPOINT CARDS
+========================================================= */
+
+.roadmap-route {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.milestone-card {
+  position: relative;
+
+  cursor: pointer;
+}
+
+.milestone-card-inner {
+  height: 100%;
+
+  padding:
+    26px;
+
+  border-radius: 27px;
+
+  background:
+    rgba(255, 255, 255, 0.83);
+
+  border:
+    1px solid
+    rgba(108, 72, 134, 0.08);
+
+  box-shadow:
+    0 17px 42px
+    rgba(94, 63, 119, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.milestone-card:hover
+  .milestone-card-inner {
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    0 24px 55px
+    rgba(93, 61, 120, 0.12);
+
+  border-color:
+    rgba(111, 76, 140, 0.13);
+}
+
+.milestone-card.current
+  .milestone-card-inner {
+  border-color:
+    rgba(139, 93, 216, 0.25);
+
+  box-shadow:
+    0 22px 55px
+    rgba(109, 70, 146, 0.12);
+}
+
+.milestone-card.completed
+  .milestone-card-inner {
+  background:
+    linear-gradient(
+      135deg,
+      #f5fcf7,
+      #ffffff
+    );
+
+  border-color:
+    rgba(82, 151, 104, 0.13);
+}
+
+.milestone-marker {
+  position: absolute;
+
+  z-index: 5;
+
+  top: 16px;
+  right: 16px;
+
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  border:
+    4px solid
+    #f8effc;
+
+  border-radius: 50%;
+
+  background:
+    #5c3779;
+
+  color: #ffd0bd;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 18px
+    rgba(76, 40, 103, 0.15);
+}
+
+.milestone-card.completed
+  .milestone-marker {
+  background:
+    linear-gradient(
+      145deg,
+      #e88573,
+      #d96d84
+    );
+
+  color: white;
+}
+
+.milestone-top {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-right: 48px;
+}
+
+.milestone-number {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #a272bf;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+.milestone-top h3 {
+  margin: 0;
+
+  color: #3f2253;
+
+  font-size: 21px;
+
+  line-height: 1.2;
+}
+
+.duration-pill {
+  flex-shrink: 0;
+
+  padding:
+    7px
+    9px;
+
+  border-radius: 999px;
+
+  background:
+    #f7edf9;
+
+  color: #815f91;
+
+  font-size: 8px;
+
+  font-weight: 800;
+}
+
+.milestone-description {
+  margin:
+    15px
+    0
+    20px;
+
+  color: #84758c;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.milestone-block {
+  margin-top: 18px;
+}
+
+.block-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #9672a9;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.1px;
+}
+
+.skill-pills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.skill-pill {
+  padding:
+    7px
+    9px;
+
+  border-radius: 999px;
+
+  background:
+    #f0e8fa;
+
+  color: #674581;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   TASKS
+========================================================= */
+
+.tasks-heading {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.task-count {
+  color: #9a7f9f;
+
+  font-size: 8px;
+
+  font-weight: 800;
+}
+
+.task-list {
+  display: grid;
+
+  gap: 7px;
+}
+
+.task-preview {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding:
+    8px
+    9px;
+
+  border-radius: 11px;
+
+  background:
+    #faf7fc;
+
+  color: #745f7e;
+
+  font-size: 9px;
+
+  line-height: 1.45;
+}
+
+.task-dot {
+  width: 21px;
+  height: 21px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 7px;
+
+  background:
+    #f2e4f9;
+
+  color: #825aa2;
+
+  font-size: 8px;
+
+  font-weight: 800;
+}
+
+.task-preview-completed {
+  background:
+    #f2faf4;
+
+  color: #477359;
+}
+
+.task-preview-completed
+  .task-dot {
+  background:
+    #b7e5c4;
+
+  color: #39704e;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.milestone-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 20px;
+
+  padding-top: 16px;
+
+  border-top:
+    1px solid
+    rgba(106, 76, 128, 0.08);
+}
+
+.milestone-status {
+  color: #8b7893;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+.milestone-card.completed
+  .milestone-status {
+  color: #518363;
+}
+
+.continue-button {
+  flex-shrink: 0;
+
+  border: none;
+
+  padding:
+    9px
+    12px;
+
+  border-radius: 10px;
+
+  background:
+    #4c2866;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.empty-roadmap {
+  padding:
+    65px
+    30px;
+
+  text-align: center;
+
+  border-radius: 25px;
+
+  background:
+    rgba(255, 255, 255, 0.77);
+
+  border:
+    1px dashed
+    rgba(104, 71, 135, 0.14);
+}
+
+.empty-icon {
+  font-size: 45px;
+
+  margin-bottom: 12px;
+}
+
+.empty-roadmap h3 {
+  margin: 0;
+
+  color: #45275c;
+
+  font-size: 17px;
+}
+
+.empty-roadmap p {
+  max-width: 410px;
+
+  margin:
+    7px
+    auto
+    0;
+
+  color: #8c7a95;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   FINAL DESTINATION
+========================================================= */
+
+.final-destination {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 220px;
+
+  margin-top: 24px;
+
+  padding:
+    37px
+    42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  border-radius: 31px;
+
+  background:
+    radial-gradient(
+      circle at 86% 42%,
+      rgba(255, 196, 172, 0.19),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #3b2051,
+      #63407f
+    );
+
+  box-shadow:
+    0 24px 60px
+    rgba(63, 36, 85, 0.16);
+}
+
+.destination-label {
+  color: #ffc1a5;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+.destination-content h2 {
+  margin:
+    8px
+    0
+    6px;
+
+  color: white;
+
+  font-size: 31px;
+
+  letter-spacing: -1px;
+}
+
+.destination-content p {
+  max-width: 550px;
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.61);
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.destination-route {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 23px;
+
+  color:
+    rgba(255, 255, 255, 0.48);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.destination-route-line {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #ffae8d;
+}
+
+.destination-plane {
+  font-size: 77px;
+
+  transform:
+    rotate(-12deg);
+
+  animation:
+    heroPlaneFloat
+    4s
+    ease-in-out
+    infinite;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.roadmap-loading {
+  min-height: 100vh;
+
+  display: grid;
+
+  place-items: center;
+
+  align-content: center;
+
+  gap: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff1e8,
+      #f0e8ff
+    );
+
+  color: #44245c;
+}
+
+.roadmap-loading-plane {
+  font-size: 55px;
+
+  animation:
+    heroPlaneFloat
+    2s
+    ease-in-out
+    infinite;
+}
+
+.roadmap-loading h2 {
+  margin:
+    6px
+    0
+    0;
+
+  font-size: 24px;
+}
+
+.roadmap-loading p {
+  margin: 0;
+
+  color: #887592;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .roadmap-hero {
+    grid-template-columns: 1fr;
+
+    padding:
+      42px
+      34px;
+  }
+
+  .hero-flight-visual {
+    min-height: 230px;
+
+    margin-top: 5px;
+  }
+
+  .roadmap-current-card {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .roadmap-route {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .roadmap-topbar {
+    width: min(
+      calc(100% - 32px),
+      1140px
+    );
+
+    padding:
+      16px
+      0;
+  }
+
+  .roadmap-container {
+    width: min(
+      calc(100% - 32px),
+      1140px
+    );
+  }
+
+  .roadmap-hero {
+    padding:
+      31px
+      23px;
+
+    border-radius: 29px;
+  }
+
+  .hero-copy h1 {
+    font-size: 40px;
+  }
+
+  .hero-meta {
+    flex-direction: column;
+  }
+
+  .hero-meta-item {
+    width: 100%;
+  }
+
+  .roadmap-progress-card {
+    padding:
+      23px
+      20px;
+  }
+
+  .progress-heading h2 {
+    font-size: 20px;
+  }
+
+  .progress-number {
+    font-size: 31px;
+  }
+
+  .progress-stats {
+    gap: 15px;
+  }
+
+  .journey-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .journey-heading h2 {
+    font-size: 31px;
+  }
+
+  .milestone-card-inner {
+    padding:
+      23px
+      20px;
+  }
+
+  .milestone-top {
+    flex-direction: column;
+
+    padding-right: 42px;
+  }
+
+  .duration-pill {
+    align-self: flex-start;
+  }
+
+  .final-destination {
+    padding:
+      30px
+      24px;
+  }
+
+  .destination-plane {
+    display: none;
+  }
+}
+
+@media (max-width: 460px) {
+  .roadmap-back-button {
+    padding:
+      10px
+      12px;
+
+    font-size: 10px;
+  }
+
+  .roadmap-brand {
+    font-size: 17px;
+  }
+
+  .roadmap-brand-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .hero-copy h1 {
+    font-size: 35px;
+  }
+
+  .hero-flight-visual {
+    min-height: 190px;
+  }
+
+  .hero-orbit {
+    transform:
+      scale(0.78)
+      rotate(-12deg);
+  }
+
+  .hero-plane {
+    width: 84px;
+    height: 84px;
+
+    border-radius: 25px;
+
+    font-size: 39px;
+  }
+
+  .progress-markers {
+    font-size: 7px;
+  }
+
+  .progress-stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .milestone-top h3 {
+    font-size: 18px;
+  }
+
+  .milestone-marker {
+    width: 35px;
+    height: 35px;
+
+    top: 14px;
+    right: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-plane,
+  .destination-plane,
+  .roadmap-loading-plane {
+    animation: none;
+  }
+}

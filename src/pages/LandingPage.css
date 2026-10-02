@@ -1,0 +1,761 @@
+/* ================================
+   PATHPILOT LANDING PAGE
+================================ */
+
+.landing-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 205, 190, 0.7),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(216, 197, 255, 0.7),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 55% 85%,
+      rgba(249, 205, 223, 0.45),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #fff7f1 0%,
+      #ffe1d5 42%,
+      #f0dcff 100%
+    );
+
+  color: #30254d;
+  font-family: inherit;
+}
+
+
+/* ================================
+   BACKGROUND GLOWS
+================================ */
+
+.sky-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(50px);
+}
+
+.sky-glow-one {
+  width: 360px;
+  height: 220px;
+
+  top: 10%;
+  left: 10%;
+
+  background: rgba(255, 189, 186, 0.24);
+}
+
+.sky-glow-two {
+  width: 420px;
+  height: 260px;
+
+  right: 8%;
+  bottom: 8%;
+
+  background: rgba(190, 170, 255, 0.23);
+}
+
+
+/* ================================
+   CLOUDS
+================================ */
+
+.cloud {
+  position: absolute;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 6rem;
+  line-height: 1;
+
+  filter: blur(2px);
+
+  pointer-events: none;
+
+  user-select: none;
+
+  animation: cloudFloat 7s ease-in-out infinite;
+}
+
+.cloud-one {
+  top: 13%;
+  left: 5%;
+}
+
+.cloud-two {
+  top: 29%;
+  right: 5%;
+
+  font-size: 5rem;
+
+  animation-delay: 2s;
+}
+
+.cloud-three {
+  bottom: 8%;
+  left: 33%;
+
+  font-size: 4.5rem;
+
+  opacity: 0.42;
+
+  animation-delay: 1s;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.landing-header {
+  position: relative;
+  z-index: 20;
+
+  width: min(1180px, calc(100% - 64px));
+
+  margin: 0 auto;
+
+  padding-top: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.brand-plane {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  box-shadow:
+    0 8px 25px rgba(90, 60, 120, 0.09);
+
+  color: #8153d9;
+
+  font-size: 1.3rem;
+
+  transform: rotate(-10deg);
+}
+
+.brand-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+
+  letter-spacing: -0.7px;
+
+  color: #30254d;
+}
+
+.brand-name span {
+  color: #9a59d8;
+}
+
+.menu-button {
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(125, 91, 165, 0.12);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.52);
+
+  color: #5e526d;
+
+  font-size: 1.1rem;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.menu-button:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero-section {
+  position: relative;
+  z-index: 5;
+
+  min-height: calc(100vh - 90px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 24px 100px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+
+  width: min(720px, 100%);
+
+  text-align: center;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+
+  margin: 0 0 18px;
+
+  padding: 8px 17px;
+
+  border: 1px solid rgba(131, 88, 180, 0.12);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.58);
+
+  color: #7a58a2;
+
+  font-size: 0.74rem;
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.hero-content h1 {
+  margin: 0;
+
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -4px;
+
+  font-weight: 800;
+
+  color: #2d2147;
+}
+
+.hero-content h1 span {
+  background: linear-gradient(
+    100deg,
+    #7852db 0%,
+    #b04ddb 50%,
+    #e3669d 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  margin: 27px auto 0;
+
+  max-width: 600px;
+
+  font-size: 1.1rem;
+
+  line-height: 1.8;
+
+  color: #685b75;
+}
+
+.start-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-top: 32px;
+
+  padding: 17px 29px;
+
+  border: none;
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      100deg,
+      #8156e2,
+      #a452dc 48%,
+      #ea6ba5
+    );
+
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 18px 35px rgba(118, 79, 193, 0.22);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.start-button:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 23px 42px rgba(118, 79, 193, 0.3);
+}
+
+.button-arrow {
+  font-size: 1.25rem;
+
+  transition: transform 0.25s ease;
+}
+
+.start-button:hover .button-arrow {
+  transform: translateX(5px);
+}
+
+.hero-hint {
+  margin-top: 16px;
+
+  font-size: 0.75rem;
+
+  color: #8b7f95;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* ================================
+   AIRPLANE
+================================ */
+
+.hero-plane {
+  position: absolute;
+
+  top: 7%;
+  left: 50%;
+
+  z-index: 8;
+
+  width: 130px;
+  height: 130px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+
+  animation: planeFloat 4s ease-in-out infinite;
+}
+
+.plane-icon {
+  position: relative;
+  z-index: 3;
+
+  display: block;
+
+  font-size: 4.7rem;
+
+  color: #855be4;
+
+  filter:
+    drop-shadow(
+      0 13px 16px rgba(98, 62, 167, 0.22)
+    );
+
+  transform: rotate(-13deg);
+}
+
+.plane-trail {
+  position: absolute;
+
+  width: 95px;
+  height: 3px;
+
+  left: -55px;
+  top: 62px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(176, 147, 237, 0.25),
+    rgba(255, 255, 255, 0.75)
+  );
+
+  transform: rotate(-20deg);
+
+  filter: blur(1px);
+}
+
+.trail-two {
+  width: 65px;
+
+  left: -32px;
+  top: 77px;
+
+  opacity: 0.55;
+}
+
+
+/* ================================
+   DESTINATION BUBBLES
+================================ */
+
+.destination-bubble {
+  position: absolute;
+
+  z-index: 9;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  width: 126px;
+  height: 126px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.88),
+      rgba(249, 237, 255, 0.72)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.78);
+
+  box-shadow:
+    0 18px 38px rgba(90, 61, 120, 0.1);
+
+  backdrop-filter: blur(10px);
+
+  color: #382b51;
+
+  text-align: center;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  animation: bubbleFloat 6s ease-in-out infinite;
+}
+
+.bubble-icon {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 1.5rem;
+
+  color: #8658dc;
+}
+
+.bubble-web {
+  left: 9%;
+  top: 32%;
+
+  animation-delay: 0.5s;
+}
+
+.bubble-cyber {
+  left: 17%;
+  bottom: 15%;
+
+  animation-delay: 1.8s;
+}
+
+.bubble-ai {
+  right: 9%;
+  top: 30%;
+
+  animation-delay: 1.2s;
+}
+
+.bubble-data {
+  right: 16%;
+  bottom: 13%;
+
+  animation-delay: 2.2s;
+}
+
+.bubble-cloud {
+  right: 31%;
+  bottom: 7%;
+
+  width: 108px;
+  height: 108px;
+
+  animation-delay: 3s;
+}
+
+
+/* ================================
+   BOTTOM INDICATOR
+================================ */
+
+.journey-indicator {
+  position: absolute;
+
+  z-index: 20;
+
+  left: 50%;
+  bottom: 24px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: #776b84;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.indicator-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #a36bdd;
+
+  box-shadow:
+    0 0 0 5px rgba(163, 107, 221, 0.12);
+}
+
+.indicator-arrow {
+  margin-left: 4px;
+
+  animation: indicatorBounce 1.8s ease-in-out infinite;
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes planeFloat {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-13px) rotate(2deg);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(-2deg);
+  }
+}
+
+@keyframes cloudFloat {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(18px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bubbleFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes indicatorBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .landing-header {
+    width: calc(100% - 40px);
+  }
+
+  .destination-bubble {
+    transform: scale(0.84);
+  }
+
+  .bubble-web {
+    left: 3%;
+  }
+
+  .bubble-cyber {
+    left: 4%;
+  }
+
+  .bubble-ai {
+    right: 3%;
+  }
+
+  .bubble-data {
+    right: 4%;
+  }
+
+  .bubble-cloud {
+    right: 23%;
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 650px) {
+  .landing-header {
+    width: calc(100% - 30px);
+
+    padding-top: 18px;
+  }
+
+  .hero-section {
+    min-height: calc(100vh - 70px);
+
+    padding: 80px 20px 80px;
+  }
+
+  .hero-plane {
+    top: 7%;
+
+    width: 90px;
+    height: 90px;
+  }
+
+  .plane-icon {
+    font-size: 3.3rem;
+  }
+
+  .destination-bubble {
+    width: 85px;
+    height: 85px;
+
+    font-size: 0.62rem;
+  }
+
+  .bubble-icon {
+    font-size: 1.05rem;
+  }
+
+  .bubble-web {
+    left: 3%;
+    top: 28%;
+  }
+
+  .bubble-cyber {
+    left: 4%;
+    bottom: 18%;
+  }
+
+  .bubble-ai {
+    right: 3%;
+    top: 28%;
+  }
+
+  .bubble-data {
+    right: 4%;
+    bottom: 18%;
+  }
+
+  .bubble-cloud {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .start-button {
+    padding: 15px 25px;
+  }
+
+  .journey-indicator {
+    bottom: 15px;
+  }
+}
+
+
+/* ================================
+   REDUCED MOTION
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .plane-icon,
+  .hero-plane,
+  .cloud,
+  .destination-bubble,
+  .indicator-arrow {
+    animation: none;
+  }
+}

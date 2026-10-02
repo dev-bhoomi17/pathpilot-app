@@ -1,0 +1,254 @@
+.settings-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(248, 143, 171, 0.19), transparent 28%),
+    radial-gradient(circle at 90% 20%, rgba(168, 144, 221, 0.2), transparent 30%),
+    #f7f1f4;
+  color: #2d2035;
+}
+
+.settings-glow {
+  position: fixed;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.settings-glow-one {
+  left: -140px;
+  top: 30%;
+  background: rgba(249, 161, 187, 0.15);
+}
+
+.settings-glow-two {
+  right: -140px;
+  bottom: 10%;
+  background: rgba(171, 146, 220, 0.15);
+}
+
+.settings-topbar {
+  height: 76px;
+  padding: 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  background: rgba(247, 241, 244, 0.82);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(54, 37, 65, 0.08);
+}
+
+.settings-back-button {
+  border: none;
+  background: white;
+  color: #44334d;
+  padding: 11px 17px;
+  border-radius: 13px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.settings-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #2e1d3b;
+  font-size: 21px;
+}
+
+.settings-brand span {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: linear-gradient(145deg, #f28eaa, #9b8ad4);
+  color: white;
+}
+
+.settings-container {
+  width: min(900px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 54px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.settings-heading span,
+.settings-section-heading > div > span,
+.settings-account-card span {
+  color: #9b637b;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+}
+
+.settings-heading h1 {
+  margin: 8px 0 10px;
+  font-size: clamp(42px, 6vw, 62px);
+  line-height: 1;
+  letter-spacing: -2.5px;
+}
+
+.settings-heading p {
+  margin: 0 0 35px;
+  color: #756978;
+  line-height: 1.7;
+}
+
+.settings-section {
+  margin-bottom: 18px;
+  padding: 25px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(53, 35, 65, 0.07);
+  box-shadow: 0 15px 32px rgba(53, 34, 66, 0.055);
+}
+
+.settings-section-heading h2,
+.settings-account-card h2 {
+  margin: 6px 0 0;
+  color: #32223b;
+  font-size: 23px;
+}
+
+.settings-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee8ef;
+}
+
+.settings-option:last-child {
+  border-bottom: none;
+  padding-bottom: 2px;
+}
+
+.settings-option strong {
+  color: #38283f;
+  font-size: 14px;
+}
+
+.settings-option p {
+  margin: 5px 0 0;
+  color: #807583;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.settings-toggle {
+  width: 48px;
+  height: 28px;
+  padding: 3px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 999px;
+  background: #d8d0da;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.settings-toggle span {
+  width: 22px;
+  height: 22px;
+  display: block;
+  border-radius: 50%;
+  background: white;
+  transition: 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.settings-toggle.active {
+  background: #362246;
+}
+
+.settings-toggle.active span {
+  transform: translateX(20px);
+}
+
+.settings-account-card {
+  margin-top: 18px;
+  padding: 25px;
+  border-radius: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  background: linear-gradient(135deg, #f7d9e3, #e8ddf3);
+  border: 1px solid rgba(71, 47, 80, 0.07);
+}
+
+.settings-account-card p {
+  margin: 9px 0 0;
+  color: #745f73;
+  font-size: 13px;
+}
+
+.settings-signout-button {
+  border: 1px solid rgba(121, 73, 94, 0.15);
+  background: rgba(255, 255, 255, 0.7);
+  color: #703d56;
+  padding: 11px 16px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.settings-save-button {
+  margin-top: 20px;
+  border: none;
+  background: #332145;
+  color: white;
+  padding: 13px 20px;
+  border-radius: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.settings-footer-note {
+  margin-top: 26px;
+  padding: 18px 21px;
+  border-radius: 17px;
+  background: linear-gradient(135deg, #fae0e8, #ece5fa);
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  color: #715a70;
+}
+
+.settings-footer-note span {
+  font-size: 21px;
+}
+
+.settings-footer-note p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+@media (max-width: 600px) {
+  .settings-topbar {
+    padding: 0 18px;
+  }
+
+  .settings-container {
+    width: calc(100% - 28px);
+  }
+
+  .settings-account-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
