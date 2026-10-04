@@ -1,761 +1,1308 @@
-/* ================================
-   PATHPILOT LANDING PAGE
-================================ */
+/* =========================================================
+   LANDING PAGE
+========================================================= */
 
 .landing-page {
-  min-height: 100vh;
   position: relative;
+  min-height: 100vh;
   overflow: hidden;
 
   background:
     radial-gradient(
-      circle at 20% 20%,
-      rgba(255, 205, 190, 0.7),
-      transparent 28%
+      circle at 78% 12%,
+      rgba(255, 185, 158, 0.42),
+      transparent 22%
     ),
     radial-gradient(
-      circle at 82% 18%,
-      rgba(216, 197, 255, 0.7),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 55% 85%,
-      rgba(249, 205, 223, 0.45),
-      transparent 30%
+      circle at 18% 82%,
+      rgba(135, 211, 207, 0.22),
+      transparent 25%
     ),
     linear-gradient(
       135deg,
       #fff7f1 0%,
-      #ffe1d5 42%,
-      #f0dcff 100%
+      #f8f0ff 48%,
+      #edf7f6 100%
     );
 
-  color: #30254d;
-  font-family: inherit;
+  color: #3e2457;
 }
 
+/* =========================================================
+   BACKGROUND ORBS
+========================================================= */
 
-/* ================================
-   BACKGROUND GLOWS
-================================ */
-
-.sky-glow {
+.landing-orb {
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
-  filter: blur(50px);
+  filter: blur(1px);
 }
 
-.sky-glow-one {
-  width: 360px;
-  height: 220px;
+.landing-orb-one {
+  width: 370px;
+  height: 370px;
 
-  top: 10%;
-  left: 10%;
+  top: -160px;
+  right: -90px;
 
-  background: rgba(255, 189, 186, 0.24);
+  background: rgba(255, 178, 148, 0.18);
 }
 
-.sky-glow-two {
-  width: 420px;
-  height: 260px;
+.landing-orb-two {
+  width: 270px;
+  height: 270px;
 
-  right: 8%;
-  bottom: 8%;
+  bottom: -120px;
+  left: -100px;
 
-  background: rgba(190, 170, 255, 0.23);
+  background: rgba(105, 195, 191, 0.13);
 }
 
-
-/* ================================
+/* =========================================================
    CLOUDS
-================================ */
+========================================================= */
 
-.cloud {
+.landing-cloud {
   position: absolute;
+  z-index: 0;
 
   color: rgba(255, 255, 255, 0.72);
 
-  font-size: 6rem;
-  line-height: 1;
+  font-size: 60px;
 
-  filter: blur(2px);
+  filter: blur(0.2px);
 
   pointer-events: none;
 
-  user-select: none;
-
-  animation: cloudFloat 7s ease-in-out infinite;
+  animation: landingCloudFloat 8s ease-in-out infinite;
 }
 
-.cloud-one {
-  top: 13%;
-  left: 5%;
+.landing-cloud-one {
+  top: 18%;
+  left: 4%;
 }
 
-.cloud-two {
-  top: 29%;
-  right: 5%;
+.landing-cloud-two {
+  top: 72%;
+  right: 3%;
 
-  font-size: 5rem;
+  font-size: 45px;
 
   animation-delay: 2s;
 }
 
-.cloud-three {
-  bottom: 8%;
-  left: 33%;
+.landing-cloud-three {
+  top: 11%;
+  right: 33%;
 
-  font-size: 4.5rem;
+  font-size: 34px;
 
-  opacity: 0.42;
+  opacity: 0.45;
 
-  animation-delay: 1s;
+  animation-delay: 4s;
 }
 
-
-/* ================================
-   HEADER
-================================ */
-
-.landing-header {
-  position: relative;
-  z-index: 20;
-
-  width: min(1180px, calc(100% - 64px));
-
-  margin: 0 auto;
-
-  padding-top: 28px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-
-  gap: 10px;
-}
-
-.brand-plane {
-  width: 38px;
-  height: 38px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 12px;
-
-  background: rgba(255, 255, 255, 0.7);
-
-  box-shadow:
-    0 8px 25px rgba(90, 60, 120, 0.09);
-
-  color: #8153d9;
-
-  font-size: 1.3rem;
-
-  transform: rotate(-10deg);
-}
-
-.brand-name {
-  font-size: 1.35rem;
-  font-weight: 800;
-
-  letter-spacing: -0.7px;
-
-  color: #30254d;
-}
-
-.brand-name span {
-  color: #9a59d8;
-}
-
-.menu-button {
-  width: 42px;
-  height: 42px;
-
-  border: 1px solid rgba(125, 91, 165, 0.12);
-  border-radius: 12px;
-
-  background: rgba(255, 255, 255, 0.52);
-
-  color: #5e526d;
-
-  font-size: 1.1rem;
-
-  cursor: pointer;
-
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease;
-}
-
-.menu-button:hover {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.8);
-}
-
-
-/* ================================
-   HERO
-================================ */
-
-.hero-section {
-  position: relative;
-  z-index: 5;
-
-  min-height: calc(100vh - 90px);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 40px 24px 100px;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 10;
-
-  width: min(720px, 100%);
-
-  text-align: center;
-}
-
-.hero-eyebrow {
-  display: inline-block;
-
-  margin: 0 0 18px;
-
-  padding: 8px 17px;
-
-  border: 1px solid rgba(131, 88, 180, 0.12);
-  border-radius: 999px;
-
-  background: rgba(255, 255, 255, 0.58);
-
-  color: #7a58a2;
-
-  font-size: 0.74rem;
-  font-weight: 800;
-
-  letter-spacing: 1.8px;
-}
-
-.hero-content h1 {
-  margin: 0;
-
-  font-size: clamp(3.5rem, 8vw, 6.5rem);
-
-  line-height: 0.98;
-
-  letter-spacing: -4px;
-
-  font-weight: 800;
-
-  color: #2d2147;
-}
-
-.hero-content h1 span {
-  background: linear-gradient(
-    100deg,
-    #7852db 0%,
-    #b04ddb 50%,
-    #e3669d 100%
-  );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-}
-
-.hero-description {
-  margin: 27px auto 0;
-
-  max-width: 600px;
-
-  font-size: 1.1rem;
-
-  line-height: 1.8;
-
-  color: #685b75;
-}
-
-.start-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 18px;
-
-  margin-top: 32px;
-
-  padding: 17px 29px;
-
-  border: none;
-  border-radius: 999px;
-
-  background:
-    linear-gradient(
-      100deg,
-      #8156e2,
-      #a452dc 48%,
-      #ea6ba5
-    );
-
-  color: white;
-
-  font-size: 1rem;
-  font-weight: 700;
-
-  cursor: pointer;
-
-  box-shadow:
-    0 18px 35px rgba(118, 79, 193, 0.22);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.start-button:hover {
-  transform: translateY(-4px);
-
-  box-shadow:
-    0 23px 42px rgba(118, 79, 193, 0.3);
-}
-
-.button-arrow {
-  font-size: 1.25rem;
-
-  transition: transform 0.25s ease;
-}
-
-.start-button:hover .button-arrow {
-  transform: translateX(5px);
-}
-
-.hero-hint {
-  margin-top: 16px;
-
-  font-size: 0.75rem;
-
-  color: #8b7f95;
-
-  letter-spacing: 0.3px;
-}
-
-
-/* ================================
-   AIRPLANE
-================================ */
-
-.hero-plane {
-  position: absolute;
-
-  top: 7%;
-  left: 50%;
-
-  z-index: 8;
-
-  width: 130px;
-  height: 130px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transform: translateX(-50%);
-
-  pointer-events: none;
-
-  animation: planeFloat 4s ease-in-out infinite;
-}
-
-.plane-icon {
-  position: relative;
-  z-index: 3;
-
-  display: block;
-
-  font-size: 4.7rem;
-
-  color: #855be4;
-
-  filter:
-    drop-shadow(
-      0 13px 16px rgba(98, 62, 167, 0.22)
-    );
-
-  transform: rotate(-13deg);
-}
-
-.plane-trail {
-  position: absolute;
-
-  width: 95px;
-  height: 3px;
-
-  left: -55px;
-  top: 62px;
-
-  border-radius: 999px;
-
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(176, 147, 237, 0.25),
-    rgba(255, 255, 255, 0.75)
-  );
-
-  transform: rotate(-20deg);
-
-  filter: blur(1px);
-}
-
-.trail-two {
-  width: 65px;
-
-  left: -32px;
-  top: 77px;
-
-  opacity: 0.55;
-}
-
-
-/* ================================
-   DESTINATION BUBBLES
-================================ */
-
-.destination-bubble {
-  position: absolute;
-
-  z-index: 9;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 8px;
-
-  width: 126px;
-  height: 126px;
-
-  border-radius: 50%;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.88),
-      rgba(249, 237, 255, 0.72)
-    );
-
-  border: 1px solid rgba(255, 255, 255, 0.78);
-
-  box-shadow:
-    0 18px 38px rgba(90, 61, 120, 0.1);
-
-  backdrop-filter: blur(10px);
-
-  color: #382b51;
-
-  text-align: center;
-
-  font-size: 0.78rem;
-  font-weight: 700;
-
-  line-height: 1.25;
-
-  animation: bubbleFloat 6s ease-in-out infinite;
-}
-
-.bubble-icon {
-  display: block;
-
-  margin-bottom: 4px;
-
-  font-size: 1.5rem;
-
-  color: #8658dc;
-}
-
-.bubble-web {
-  left: 9%;
-  top: 32%;
-
-  animation-delay: 0.5s;
-}
-
-.bubble-cyber {
-  left: 17%;
-  bottom: 15%;
-
-  animation-delay: 1.8s;
-}
-
-.bubble-ai {
-  right: 9%;
-  top: 30%;
-
-  animation-delay: 1.2s;
-}
-
-.bubble-data {
-  right: 16%;
-  bottom: 13%;
-
-  animation-delay: 2.2s;
-}
-
-.bubble-cloud {
-  right: 31%;
-  bottom: 7%;
-
-  width: 108px;
-  height: 108px;
-
-  animation-delay: 3s;
-}
-
-
-/* ================================
-   BOTTOM INDICATOR
-================================ */
-
-.journey-indicator {
-  position: absolute;
-
-  z-index: 20;
-
-  left: 50%;
-  bottom: 24px;
-
-  transform: translateX(-50%);
-
-  display: flex;
-  align-items: center;
-
-  gap: 9px;
-
-  color: #776b84;
-
-  font-size: 0.78rem;
-  font-weight: 600;
-
-  white-space: nowrap;
-}
-
-.indicator-dot {
-  width: 7px;
-  height: 7px;
-
-  border-radius: 50%;
-
-  background: #a36bdd;
-
-  box-shadow:
-    0 0 0 5px rgba(163, 107, 221, 0.12);
-}
-
-.indicator-arrow {
-  margin-left: 4px;
-
-  animation: indicatorBounce 1.8s ease-in-out infinite;
-}
-
-
-/* ================================
-   ANIMATIONS
-================================ */
-
-@keyframes planeFloat {
-  0% {
-    transform: translateX(-50%) translateY(0) rotate(-2deg);
-  }
-
-  50% {
-    transform: translateX(-50%) translateY(-13px) rotate(2deg);
-  }
-
-  100% {
-    transform: translateX(-50%) translateY(0) rotate(-2deg);
-  }
-}
-
-@keyframes cloudFloat {
-  0% {
-    transform: translateX(0);
-  }
-
-  50% {
-    transform: translateX(18px);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes bubbleFloat {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-9px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes indicatorBounce {
+@keyframes landingCloudFloat {
   0%,
   100% {
     transform: translateY(0);
   }
 
   50% {
-    transform: translateY(4px);
+    transform: translateY(-12px);
   }
 }
 
+/* =========================================================
+   SPARKS
+========================================================= */
 
-/* ================================
-   TABLET
-================================ */
+.landing-spark {
+  position: absolute;
+  z-index: 0;
 
-@media (max-width: 900px) {
-  .landing-header {
-    width: calc(100% - 40px);
+  color: #de8c75;
+
+  font-size: 24px;
+
+  opacity: 0.45;
+
+  pointer-events: none;
+
+  animation: landingSpark 3s ease-in-out infinite;
+}
+
+.landing-spark-one {
+  top: 27%;
+  left: 49%;
+}
+
+.landing-spark-two {
+  bottom: 22%;
+  left: 42%;
+
+  color: #8770c9;
+
+  animation-delay: 0.8s;
+}
+
+.landing-spark-three {
+  top: 35%;
+  right: 6%;
+
+  color: #6fbdb7;
+
+  animation-delay: 1.4s;
+}
+
+@keyframes landingSpark {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.3;
   }
 
-  .destination-bubble {
-    transform: scale(0.84);
-  }
-
-  .bubble-web {
-    left: 3%;
-  }
-
-  .bubble-cyber {
-    left: 4%;
-  }
-
-  .bubble-ai {
-    right: 3%;
-  }
-
-  .bubble-data {
-    right: 4%;
-  }
-
-  .bubble-cloud {
-    right: 23%;
+  50% {
+    transform: scale(1.3) rotate(12deg);
+    opacity: 0.85;
   }
 }
 
+/* =========================================================
+   HEADER
+========================================================= */
 
-/* ================================
-   MOBILE
-================================ */
+.landing-header {
+  position: relative;
+  z-index: 10;
+
+  max-width: 1380px;
+  margin: 0 auto;
+
+  padding: 25px 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landing-logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.landing-logo-icon {
+  width: 43px;
+  height: 43px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+
+  background: #482461;
+  color: #ffd3c2;
+
+  font-size: 21px;
+
+  transform: rotate(-8deg);
+
+  box-shadow:
+    0 12px 26px rgba(72, 36, 97, 0.16);
+}
+
+.landing-logo-text {
+  color: #3d2057;
+
+  font-size: 21px;
+  font-weight: 850;
+
+  letter-spacing: -0.6px;
+}
+
+.landing-header-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 13px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.62);
+
+  border: 1px solid rgba(110, 77, 138, 0.08);
+
+  color: #8b7897;
+
+  font-size: 10px;
+  font-weight: 750;
+
+  box-shadow:
+    0 8px 26px rgba(92, 66, 112, 0.05);
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #70c6bd;
+
+  box-shadow:
+    0 0 0 4px rgba(112, 198, 189, 0.13);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.landing-hero {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1380px;
+
+  min-height: calc(100vh - 100px);
+
+  margin: 0 auto;
+
+  padding:
+    48px
+    42px
+    70px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(420px, 0.9fr)
+    minmax(560px, 1.1fr);
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+/* =========================================================
+   LEFT COPY
+========================================================= */
+
+.landing-copy {
+  position: relative;
+  z-index: 5;
+
+  padding-bottom: 10px;
+}
+
+.landing-eyebrow {
+  width: fit-content;
+
+  padding: 8px 13px;
+
+  margin-bottom: 22px;
+
+  border-radius: 999px;
+
+  background: rgba(72, 36, 97, 0.07);
+
+  border: 1px solid rgba(72, 36, 97, 0.08);
+
+  color: #76548e;
+
+  font-size: 10px;
+  font-weight: 850;
+
+  letter-spacing: 1.4px;
+}
+
+.landing-copy h1 {
+  max-width: 640px;
+
+  margin: 0;
+
+  color: #3d2254;
+
+  font-size: clamp(
+    49px,
+    6vw,
+    82px
+  );
+
+  line-height: 0.98;
+
+  letter-spacing: -4px;
+}
+
+.landing-copy h1 span {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #e58a71;
+
+  font-family:
+    "Covered By Your Grace",
+    cursive;
+
+  font-size: 1.04em;
+
+  font-weight: 400;
+
+  letter-spacing: 0;
+}
+
+.landing-description {
+  max-width: 565px;
+
+  margin: 25px 0 28px;
+
+  color: #786985;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.landing-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+.landing-primary-button {
+  min-width: 220px;
+
+  padding: 15px 18px 15px 20px;
+
+  border: none;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #492562,
+      #674080
+    );
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 850;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 18px 38px rgba(70, 36, 95, 0.22);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.landing-primary-button:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 25px 45px rgba(70, 36, 95, 0.28);
+}
+
+.landing-primary-button strong {
+  width: 31px;
+  height: 31px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  font-size: 15px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.landing-primary-button:hover strong {
+  transform: translateX(4px);
+}
+
+.landing-action-note {
+  color: #9a899f;
+
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.landing-action-note span {
+  color: #e78f74;
+
+  margin-right: 6px;
+}
+
+/* =========================================================
+   TRUST ROW
+========================================================= */
+
+.landing-trust-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 44px;
+}
+
+.landing-trust-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.landing-trust-item > span {
+  width: 31px;
+  height: 31px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid rgba(120, 88, 145, 0.08);
+
+  font-size: 14px;
+}
+
+.landing-trust-item div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.landing-trust-item strong {
+  color: #5b3a6e;
+
+  font-size: 10px;
+
+  font-weight: 850;
+}
+
+.landing-trust-item small {
+  color: #a18fa5;
+
+  font-size: 8px;
+
+  font-weight: 650;
+}
+
+.landing-trust-line {
+  width: 30px;
+  height: 1px;
+
+  background:
+    repeating-linear-gradient(
+      to right,
+      #d6c8dd 0,
+      #d6c8dd 4px,
+      transparent 4px,
+      transparent 8px
+    );
+}
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.landing-visual {
+  position: relative;
+
+  min-height: 625px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   ROUTE
+========================================================= */
+
+.landing-route {
+  position: absolute;
+
+  width: 490px;
+  height: 380px;
+
+  border:
+    1.5px dashed
+    rgba(105, 75, 132, 0.23);
+
+  border-radius: 49%;
+
+  transform:
+    rotate(-17deg)
+    translateX(10px);
+}
+
+.route-start {
+  position: absolute;
+
+  left: 14%;
+  bottom: 14%;
+
+  width: 13px;
+  height: 13px;
+
+  border-radius: 50%;
+
+  background: #72beb8;
+
+  box-shadow:
+    0 0 0 6px rgba(114, 190, 184, 0.12);
+}
+
+.route-end {
+  position: absolute;
+
+  top: 8%;
+  right: 13%;
+
+  width: 49px;
+  height: 49px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffd0bd,
+      #ffb498
+    );
+
+  box-shadow:
+    0 14px 30px rgba(238, 145, 111, 0.2);
+
+  font-size: 19px;
+
+  animation:
+    markerFloat 2.8s
+    ease-in-out
+    infinite;
+}
+
+@keyframes markerFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.route-path {
+  position: absolute;
+
+  height: 1px;
+
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(93, 62, 119, 0.32)
+        0,
+      rgba(93, 62, 119, 0.32)
+        6px,
+      transparent
+        6px,
+      transparent
+        12px
+    );
+
+  transform-origin: left center;
+}
+
+.route-path-one {
+  width: 175px;
+
+  left: 17%;
+  bottom: 23%;
+
+  transform:
+    rotate(-33deg);
+}
+
+.route-path-two {
+  width: 170px;
+
+  left: 44%;
+  top: 37%;
+
+  transform:
+    rotate(-27deg);
+}
+
+/* =========================================================
+   PLANE
+========================================================= */
+
+.landing-plane {
+  position: relative;
+  z-index: 6;
+
+  width: 125px;
+  height: 125px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 37px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffd7c6,
+      #ffac8d
+    );
+
+  color: white;
+
+  font-size: 62px;
+
+  transform: rotate(-15deg);
+
+  box-shadow:
+    0 28px 58px
+      rgba(226, 133, 100, 0.26),
+    0 0 0 15px
+      rgba(255, 255, 255, 0.34);
+
+  animation:
+    landingPlaneFloat
+    4.2s ease-in-out
+    infinite;
+}
+
+@keyframes landingPlaneFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(-15deg);
+  }
+
+  50% {
+    transform:
+      translateY(-14px)
+      rotate(-10deg);
+  }
+}
+
+.landing-plane-shadow {
+  position: absolute;
+
+  width: 120px;
+  height: 28px;
+
+  bottom: 25%;
+
+  border-radius: 50%;
+
+  background: rgba(
+    75,
+    44,
+    91,
+    0.11
+  );
+
+  filter: blur(13px);
+
+  animation:
+    planeShadowFloat
+    4.2s ease-in-out
+    infinite;
+}
+
+@keyframes planeShadowFloat {
+  0%,
+  100% {
+    transform:
+      scale(1);
+    opacity: 0.65;
+  }
+
+  50% {
+    transform:
+      scale(0.82);
+    opacity: 0.36;
+  }
+}
+
+/* =========================================================
+   DESTINATION CARD
+========================================================= */
+
+.landing-destination-card {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 4%;
+  top: 8%;
+
+  width: 310px;
+
+  padding: 24px 25px;
+
+  border-radius: 27px;
+
+  background:
+    rgba(255, 255, 255, 0.76);
+
+  border:
+    1px solid
+    rgba(110, 81, 137, 0.1);
+
+  backdrop-filter:
+    blur(18px);
+
+  box-shadow:
+    0 25px 55px
+      rgba(83, 57, 105, 0.11);
+
+  animation:
+    cardFloatOne
+    5s ease-in-out
+    infinite;
+}
+
+@keyframes cardFloatOne {
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-9px);
+  }
+}
+
+.destination-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.destination-mini-label {
+  color: #a26d90;
+
+  font-size: 8px;
+  font-weight: 850;
+
+  letter-spacing: 1.3px;
+}
+
+.destination-pin {
+  width: 32px;
+  height: 32px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 11px;
+
+  background: #fbe5dc;
+
+  font-size: 14px;
+}
+
+.landing-destination-card h2 {
+  margin: 15px 0 8px;
+
+  color: #3f2457;
+
+  font-size: 26px;
+
+  line-height: 1.06;
+
+  letter-spacing: -1.1px;
+}
+
+.landing-destination-card h2 span {
+  display: block;
+
+  color: #e78d72;
+
+  font-family:
+    "Covered By Your Grace",
+    cursive;
+
+  font-size: 1.15em;
+
+  font-weight: 400;
+
+  letter-spacing: 0;
+}
+
+.landing-destination-card p {
+  margin: 0;
+
+  color: #918094;
+
+  font-size: 11px;
+
+  line-height: 1.65;
+}
+
+/* =========================================================
+   CAREER FLOATING CARDS
+========================================================= */
+
+.career-float-card {
+  position: absolute;
+
+  z-index: 7;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 11px 13px;
+
+  border-radius: 17px;
+
+  background:
+    rgba(255, 255, 255, 0.86);
+
+  border:
+    1px solid
+    rgba(110, 79, 137, 0.08);
+
+  box-shadow:
+    0 16px 35px
+      rgba(86, 59, 108, 0.1);
+
+  backdrop-filter:
+    blur(14px);
+}
+
+.career-card-icon {
+  width: 35px;
+  height: 35px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 11px;
+
+  background: #f5e8f1;
+
+  color: #765090;
+
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.career-float-card div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.career-float-card strong {
+  color: #4e315f;
+
+  font-size: 10px;
+
+  font-weight: 850;
+}
+
+.career-float-card span {
+  color: #a190a6;
+
+  font-size: 8px;
+
+  white-space: nowrap;
+}
+
+/* CARD POSITIONS */
+
+.career-card-one {
+  left: 2%;
+  top: 26%;
+
+  animation:
+    careerFloatOne
+    4.8s ease-in-out
+    infinite;
+}
+
+.career-card-two {
+  left: 0;
+  bottom: 17%;
+
+  animation:
+    careerFloatTwo
+    5.3s ease-in-out
+    infinite;
+}
+
+.career-card-three {
+  right: 1%;
+  top: 33%;
+
+  animation:
+    careerFloatThree
+    5.1s ease-in-out
+    infinite;
+}
+
+.career-card-four {
+  right: 5%;
+  bottom: 16%;
+
+  animation:
+    careerFloatFour
+    4.7s ease-in-out
+    infinite;
+}
+
+@keyframes careerFloatOne {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(-1deg);
+  }
+
+  50% {
+    transform:
+      translateY(-9px)
+      rotate(1deg);
+  }
+}
+
+@keyframes careerFloatTwo {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(1deg);
+  }
+
+  50% {
+    transform:
+      translateY(-8px)
+      rotate(-1deg);
+  }
+}
+
+@keyframes careerFloatThree {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(1deg);
+  }
+
+  50% {
+    transform:
+      translateY(-10px)
+      rotate(-1deg);
+  }
+}
+
+@keyframes careerFloatFour {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(-1deg);
+  }
+
+  50% {
+    transform:
+      translateY(-8px)
+      rotate(1deg);
+  }
+}
+
+/* =========================================================
+   FUTURE MARKER
+========================================================= */
+
+.landing-map-marker {
+  position: absolute;
+
+  z-index: 8;
+
+  left: 31%;
+  bottom: 7%;
+
+  padding: 11px 14px;
+
+  border-radius: 15px;
+
+  background: #482461;
+
+  color: white;
+
+  box-shadow:
+    0 15px 30px
+      rgba(72, 36, 97, 0.18);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.landing-map-marker strong {
+  color: #ffd1bd;
+
+  font-size: 8px;
+
+  letter-spacing: 1.2px;
+}
+
+.landing-map-marker small {
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 9px;
+}
+
+.marker-pulse {
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  top: -4px;
+  right: -4px;
+
+  border-radius: 50%;
+
+  background: #72beb8;
+
+  box-shadow:
+    0 0 0 5px
+    rgba(114, 190, 184, 0.12);
+}
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.landing-bottom {
+  position: relative;
+  z-index: 8;
+
+  max-width: 1380px;
+
+  margin: -20px auto 0;
+
+  padding:
+    0 42px
+    26px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  color: #aa98ad;
+
+  font-size: 9px;
+  font-weight: 750;
+
+  letter-spacing: 0.3px;
+}
+
+.landing-bottom-line {
+  width: 34px;
+  height: 1px;
+
+  background: #d3c6d9;
+}
+
+.landing-bottom b {
+  color: #df8c73;
+
+  font-size: 8px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1180px) {
+
+  .landing-hero {
+    grid-template-columns:
+      0.86fr
+      1.14fr;
+
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .landing-copy h1 {
+    font-size: 64px;
+  }
+
+  .landing-visual {
+    transform: scale(0.92);
+    transform-origin: center right;
+  }
+
+}
+
+@media (max-width: 980px) {
+
+  .landing-hero {
+    grid-template-columns: 1fr;
+
+    padding-top: 35px;
+
+    text-align: center;
+  }
+
+  .landing-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .landing-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .landing-trust-row {
+    justify-content: center;
+  }
+
+  .landing-visual {
+    min-height: 570px;
+
+    transform: scale(0.88);
+  }
+
+}
 
 @media (max-width: 650px) {
+
   .landing-header {
-    width: calc(100% - 30px);
-
-    padding-top: 18px;
+    padding:
+      18px
+      18px;
   }
 
-  .hero-section {
-    min-height: calc(100vh - 70px);
-
-    padding: 80px 20px 80px;
-  }
-
-  .hero-plane {
-    top: 7%;
-
-    width: 90px;
-    height: 90px;
-  }
-
-  .plane-icon {
-    font-size: 3.3rem;
-  }
-
-  .destination-bubble {
-    width: 85px;
-    height: 85px;
-
-    font-size: 0.62rem;
-  }
-
-  .bubble-icon {
-    font-size: 1.05rem;
-  }
-
-  .bubble-web {
-    left: 3%;
-    top: 28%;
-  }
-
-  .bubble-cyber {
-    left: 4%;
-    bottom: 18%;
-  }
-
-  .bubble-ai {
-    right: 3%;
-    top: 28%;
-  }
-
-  .bubble-data {
-    right: 4%;
-    bottom: 18%;
-  }
-
-  .bubble-cloud {
+  .landing-header-status {
     display: none;
   }
 
-  .hero-content h1 {
-    font-size: clamp(3rem, 15vw, 4.5rem);
-
-    letter-spacing: -2px;
+  .landing-logo-icon {
+    width: 39px;
+    height: 39px;
   }
 
-  .hero-description {
-    font-size: 0.95rem;
+  .landing-logo-text {
+    font-size: 19px;
   }
 
-  .start-button {
-    padding: 15px 25px;
+  .landing-hero {
+    padding:
+      22px
+      18px
+      60px;
+
+    min-height: auto;
   }
 
-  .journey-indicator {
-    bottom: 15px;
+  .landing-eyebrow {
+    font-size: 8px;
   }
-}
 
-
-/* ================================
-   REDUCED MOTION
-================================ */
-
-@media (prefers-reduced-motion: reduce) {
-  .plane-icon,
-  .hero-plane,
-  .cloud,
-  .destination-bubble,
-  .indicator-arrow {
-    animation: none;
+  .landing-copy h1 {
+    font-size: 46px;
+    letter-spacing: -2.2px;
   }
+
+  .landing-description {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .landing-primary-button {
+    width: 100%;
+  }
+
+  .landing-trust-row {
+    gap: 10px;
+  }
+
+  .landing-trust-line {
+    width: 15px;
+  }
+
+  .landing-visual {
+    min-height: 570px;
+
+    transform:
+      scale(0.67);
+
+    width: 145%;
+
+    margin-left: -22%;
+  }
+
+  .landing-bottom {
+    justify-content: center;
+
+    padding:
+      0 20px
+      24px;
+
+    flex-wrap: wrap;
+  }
+
+  .landing-route {
+    opacity: 0.75;
+  }
+
 }
